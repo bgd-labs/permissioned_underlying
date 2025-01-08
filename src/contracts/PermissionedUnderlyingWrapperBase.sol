@@ -14,33 +14,8 @@ abstract contract PermissionedUnderlyingWrapperBase is ERC4626Upgradeable {
     _;
   }
 
-  function deposit(
-    uint256 assets,
-    address receiver
-  ) public override onlyAllowedUser(receiver, msg.sender) returns (uint256) {
-    return super.deposit(assets, receiver);
-  }
-
-  function mint(
-    uint256 shares,
-    address receiver
-  ) public override onlyAllowedUser(receiver, msg.sender) returns (uint256) {
-    return super.mint(shares, receiver);
-  }
-
-  function transfer(
-    address to,
-    uint256 amount
-  ) public override(ERC20Upgradeable, IERC20) onlyAllowedUser(to, msg.sender) returns (bool) {
-    return super.transfer(to, amount);
-  }
-
-  function transferFrom(
-    address from,
-    address to,
-    uint256 value
-  ) public override(ERC20Upgradeable, IERC20) onlyAllowedUser(to, from) returns (bool) {
-    return super.transferFrom(from, to, value);
+  function _update(address from, address to, uint256 value) internal override onlyAllowedUser(to, from) {
+    super._update(from, to, value);
   }
 
   function _isAddressRestricted(address user) internal view virtual returns (bool);
