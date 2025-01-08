@@ -1,0 +1,9 @@
+ds-test/=lib/forge-std/lib/ds-test/src/
+erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/
+forge-std/=lib/aave-address-book/lib/aave-v3-origin/lib/forge-std/src
+halmos-cheatcodes/=lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes/src/
+openzeppelin-contracts-upgradeable/=lib/aave-address-book/lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/
+openzeppelin-contracts/=lib/aave-address-book/lib/aave-v3-origin/lib/solidity-utils/lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/
+aave-address-book/=lib/aave-address-book/src/
+aave-v3-origin/=lib/aave-address-book/lib/aave-v3-origin/src
+solidity-utils/=lib/aave-address-book/lib/aave-v3-origin/lib/solidity-utils/src
